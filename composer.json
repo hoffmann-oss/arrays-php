@@ -1,15 +1,12 @@
 {
 	"name" : "hoffmann-oss/arrays",
 	"description" : "PHP 7 array functions",
-	"version" : "1.0.0-beta1",
-	"keywords" : [
-		"arrays",
-		"utility"
-	],
+	"version" : "1.0.0",
+	"keywords" : ["arrays", "utility"],
 	"homepage" : "https://github.com/hoffmann-oss/arrays-php",
 	"license" : "MIT",
 	"require" : {
-		"php" : ">=7.0.0"
+		"php" : ">=7.0"
 	},
 	"autoload" : {
 		"psr-4" : {
