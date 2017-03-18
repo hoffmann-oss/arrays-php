@@ -1,4 +1,4 @@
-#`hoffmann-oss/arrays-php`
+# `hoffmann-oss/arrays-php`
 
 A PHP 7 array manipulation library.
 
