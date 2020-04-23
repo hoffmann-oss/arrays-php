@@ -1,5 +1,4 @@
 <?php
-
 namespace HoffmannOSS\Arrays\Tests;
 
 require_once 'vendor/autoload.php';

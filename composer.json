@@ -2,7 +2,10 @@
 	"name" : "hoffmann-oss/arrays",
 	"description" : "PHP 7 array functions",
 	"version" : "1.0.0",
-	"keywords" : ["arrays", "utility"],
+	"keywords" : [
+		"arrays",
+		"utility"
+	],
 	"homepage" : "https://github.com/hoffmann-oss/arrays-php",
 	"license" : "MIT",
 	"require" : {
@@ -17,5 +20,8 @@
 		"psr-4" : {
 			"HoffmannOSS\\Arrays\\Tests\\" : "tests/"
 		}
+	},
+	"require-dev" : {
+		"phpunit/phpunit" : "^6"
 	}
 }

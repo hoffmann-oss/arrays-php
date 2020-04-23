@@ -3,19 +3,11 @@
 A PHP 7 array manipulation library.
 
 ## Installation with Composer
+This package is available on [packagist](https://packagist.org/packages/hoffmann-oss/arrays), so you can use [Composer](https://getcomposer.org) to install it.
+Run the following command in your shell:
 
-Add the following to your project's `composer.json` file:
-```json
-"require": {
-    "hoffmann-oss/arrays": "~1.0"
-}
 ```
-
-Run `composer update`
-
-Include Composer's `autoload.php`:
-```php
-require_once 'vendor/autoload.php';
+composer require hoffmann-oss/arrays
 ```
 
 # The `Arrays` class
@@ -38,10 +30,12 @@ the resulting array:
 
 ## fill()
 ```
-public static function fill(array &$array,
-		$item = null,
-		int $start = 0,
-		int $stop = null)
+public static function fill(
+    array &$array,
+    $item = null,
+    int $start = 0,
+    int $stop = null
+)
 ```
 ### Example:
 ```php
@@ -60,11 +54,13 @@ the resulting arrays:
 
 ## replace()
 ```
-public static function replace(array &$array,
-		array $source,
-		int $position = 0,
-		int $start = 0,
-		int $stop = null)
+public static function replace(
+    array &$array,
+    array $source,
+    int $position = 0,
+    int $start = 0,
+    int $stop = null
+)
 ```
 ### Example:
 ```php
@@ -84,9 +80,11 @@ the resulting arrays:
 
 ## reverse()
 ```
-public static function reverse(array &$array,
-		int $start = 0,
-		int $stop = null)
+public static function reverse(
+    array &$array,
+    int $start = 0,
+    int $stop = null
+)
 ```
 ### Example:
 ```php
@@ -105,10 +103,12 @@ the resulting arrays:
 
 ## rotate()
 ```
-public static function rotate(array &$array,
-		int $distance,
-		int $start = 0,
-		int $stop = null)
+public static function rotate(
+    array &$array,
+    int $distance,
+    int $start = 0,
+    int $stop = null
+)
 ```
 ### Example:
 ```php
@@ -127,9 +127,11 @@ the resulting arrays:
 
 ## shuffle()
 ```
-public static function shuffle(array &$array,
-		int $start = 0,
-		int $stop = null)
+public static function shuffle(
+    array &$array,
+    int $start = 0,
+    int $stop = null
+)
 ```
 ### Example:
 ```php
@@ -148,9 +150,11 @@ the resulting arrays:
 
 ## swap()
 ```
-public static function swap(array &$array,
-		int $index1,
-		int $index2)
+public static function swap(
+    array &$array,
+    int $index1,
+    int $index2
+)
 ```
 ### Example:
 ```php
@@ -169,9 +173,11 @@ the resulting array:
 
 ## pick()
 ```
-public static function pick(array $array,
-		int $start = 0,
-		int $stop = null)
+public static function pick(
+    array $array,
+    int $start = 0,
+    int $stop = null
+)
 ```
 ### Example:
 ```php
@@ -217,12 +223,14 @@ the resulting array:
 
 ## fill()
 ```
-public static function fill(array &$array,
-		$item = null,
-		int $startX = 0,
-		int $startY = 0,
-		int $stopX = null,
-		int $stopY = null)
+public static function fill(
+    array &$array,
+    $item = null,
+    int $startX = 0,
+    int $startY = 0,
+    int $stopX = null,
+    int $stopY = null
+)
 ```
 ### Example:
 ```php
@@ -253,14 +261,16 @@ the resulting arrays:
 
 ## replace()
 ```
-public static function replace(array &$array,
-		array $source,
-		int $x = 0,
-		int $y = 0,
-		int $startX = 0,
-		int $startY = 0,
-		int $stopX = null,
-		int $stopY = null)
+public static function replace(
+    array &$array,
+    array $source,
+    int $x = 0,
+    int $y = 0,
+    int $startX = 0,
+    int $startY = 0,
+    int $stopX = null,
+    int $stopY = null
+)
 ```
 ### Example:
 ```php
@@ -296,11 +306,13 @@ the resulting arrays:
 
 ## reverseX()
 ```
-public static function reverseX(array &$array,
-		int $startX = 0,
-		int $startY = 0,
-		int $stopX = null,
-		int $stopY = null)
+public static function reverseX(
+    array &$array,
+    int $startX = 0,
+    int $startY = 0,
+    int $stopX = null,
+    int $stopY = null
+)
 ```
 ### Example:
 ```php
@@ -331,11 +343,13 @@ the resulting arrays:
 
 ## reverseY()
 ```
-public static function reverseY(array &$array,
-		int $startX = 0,
-		int $startY = 0,
-		int $stopX = null,
-		int $stopY = null)
+public static function reverseY(
+    array &$array,
+    int $startX = 0,
+    int $startY = 0,
+    int $stopX = null,
+    int $stopY = null
+)
 ```
 ### Example:
 ```php
@@ -369,12 +383,14 @@ the resulting arrays:
 
 ## rotateX()
 ```
-public static function rotateX(array &$array,
-		int $distance,
-		int $startX = 0,
-		int $startY = 0,
-		int $stopX = null,
-		int $stopY = null)
+public static function rotateX(
+    array &$array,
+    int $distance,
+    int $startX = 0,
+    int $startY = 0,
+    int $stopX = null,
+    int $stopY = null
+)
 ```
 Array columns rotate left if distance is greater than 0.
 ### Example:
@@ -406,12 +422,14 @@ the resulting arrays:
 
 ## rotateY()
 ```
-public static function rotateY(array &$array,
-		int $distance,
-		int $startX = 0,
-		int $startY = 0,
-		int $stopX = null,
-		int $stopY = null)
+public static function rotateY(
+    array &$array,
+    int $distance,
+    int $startX = 0,
+    int $startY = 0,
+    int $stopX = null,
+    int $stopY = null
+)
 ```
 Array rows rotate up if distance is greater than 0.
 ### Example:
@@ -446,11 +464,13 @@ the resulting arrays:
 
 ## shuffle()
 ```
-public static function shuffle(array &$array,
-		int $startX = 0,
-		int $startY = 0,
-		int $stopX = null,
-		int $stopY = null)
+public static function shuffle(
+    array &$array,
+    int $startX = 0,
+    int $startY = 0,
+    int $stopX = null,
+    int $stopY = null
+)
 ```
 ### Example:
 ```php
@@ -477,11 +497,13 @@ the resulting arrays:
 
 ## shuffleX()
 ```
-public static function shuffleX(array &$array,
-		int $startX = 0,
-		int $startY = 0,
-		int $stopX = null,
-		int $stopY = null)
+public static function shuffleX(
+    array &$array,
+    int $startX = 0,
+    int $startY = 0,
+    int $stopX = null,
+    int $stopY = null
+)
 ```
 ### Example:
 ```php
@@ -512,11 +534,13 @@ the resulting arrays:
 
 ## shuffleY()
 ```
-public static function shuffleY(array &$array,
-		int $startX = 0,
-		int $startY = 0,
-		int $stopX = null,
-		int $stopY = null)
+public static function shuffleY(
+    array &$array,
+    int $startX = 0,
+    int $startY = 0,
+    int $stopX = null,
+    int $stopY = null
+)
 ```
 ### Example:
 ```php
@@ -553,11 +577,13 @@ the resulting arrays:
 
 ## swap()
 ```
-public static function swap(array &$array,
-		int $x1,
-		int $y1,
-		int $x2,
-		int $y2)
+public static function swap(
+    array &$array,
+    int $x1,
+    int $y1,
+    int $x2,
+    int $y2
+)
 ```
 ### Example:
 ```php
@@ -583,11 +609,13 @@ the resulting array:
 
 ## swapX()
 ```
-public static function swapX(array &$array,
-		int $x1,
-		int $x2,
-		int $startY = 0,
-		int $stopY = null)
+public static function swapX(
+    array &$array,
+    int $x1,
+    int $x2,
+    int $startY = 0,
+    int $stopY = null
+)
 ```
 ### Example:
 ```php
@@ -618,11 +646,13 @@ the resulting arrays:
 
 ## swapY()
 ```
-public static function swapY(array &$array,
-		int $y1,
-		int $y2,
-		int $startX = 0,
-		int $stopX = null)
+public static function swapY(
+    array &$array,
+    int $y1,
+    int $y2,
+    int $startX = 0,
+    int $stopX = null
+)
 ```
 ### Example:
 ```php
@@ -656,11 +686,13 @@ the resulting arrays:
 
 ## pick()
 ```
-public static function pick(array $array,
-		int $startX = 0,
-		int $startY = 0,
-		int $stopX = null,
-		int $stopY = null)
+public static function pick(
+    array $array,
+    int $startX = 0,
+    int $startY = 0,
+    int $stopX = null,
+    int $stopY = null
+)
 ```
 ### Example:
 ```php

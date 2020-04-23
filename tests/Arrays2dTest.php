@@ -1,8 +1,5 @@
 <?php
-
 namespace HoffmannOSS\Arrays\Tests;
-
-require_once 'vendor/autoload.php';
 
 use HoffmannOSS\Arrays\Arrays2d;
 use PHPUnit\Framework\TestCase;
@@ -16,8 +13,8 @@ class Arrays2dTest extends TestCase
 	private static $array5x5;
 	private static $array20x20;
 
-	public static function setUpBeforeClass() {
-
+	public static function setUpBeforeClass()
+	{
 		self::$array3x2 = self::buildTestArray(3, 2);
 		self::$array3x3 = self::buildTestArray(3, 3);
 		self::$array4x5 = self::buildTestArray(4, 5);
@@ -126,9 +123,16 @@ class Arrays2dTest extends TestCase
 	/**
 	 * @dataProvider replaceProvider
 	 */
-	public function testReplace(array $source, int $x, int $y,
-			$startX, $startY, $stopX, $stopY, array $expected)
-	{
+	public function testReplace(
+	    array $source,
+	    int $x,
+	    int $y,
+		$startX,
+	    $startY,
+	    $stopX,
+	    $stopY,
+	    array $expected
+    ) {
 		$array = self::$array5x5;
 		Arrays2d::replace($array, $source, $x, $y, $startX, $startY, $stopX, $stopY);
 		$this->assertEquals($expected, $array);
@@ -331,9 +335,13 @@ class Arrays2dTest extends TestCase
 		$val = Arrays2d::pick($array, $startX, $startY, $stopX, $stopY);
 		self::prepare($array, $stopX, $stopY);
 		$this->assertTrue(
-				($val % $width > $startX || ($width == $stopX ? $val % $width == 0 : false))
-				&& $val > $startY * $width
-				&& $val <= $stopY * $width);
+			(
+			    $val % $width > $startX
+			    || ($width == $stopX ? $val % $width == 0 : false)
+		    )
+			&& $val > $startY * $width
+			&& $val <= $stopY * $width
+	    );
 	}
 
 	private function tstShuffle($startX, $startY, $stopX, $stopY,
@@ -369,9 +377,11 @@ class Arrays2dTest extends TestCase
 		$stopX = $stopX ?? count(self::$array20x20[0]);
 		foreach ($array as $y => $row) {
 			foreach ($row as $x => $item) {
-				if ($item != self::$array20x20[$y][$x]
-						&& ($x < $startX || $x >= $stopX)
-						&& ($y < $startY || $y >= $stopY)) {
+				if (
+				    $item != self::$array20x20[$y][$x]
+					&& ($x < $startX || $x >= $stopX)
+					&& ($y < $startY || $y >= $stopY)
+			    ) {
 					return false;
 				}
 			}
